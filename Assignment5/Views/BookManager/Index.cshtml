@@ -1,0 +1,136 @@
+﻿@model System.Collections.Generic.List<Assignment5.Models.BookViewModel>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <strong>QUẢN LÍ SÁCH</strong>
+                    </th>
+                    <th>
+                        <form class="navbar-form navbar-left" role="search" action="/ProductManager/SearchManager">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="name" id="">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="x" style=" font-family: 'VNF-Sofia Regular';text-align:left;color:white">Search</button>
+                        </form>
+                    </th>
+                    <th>
+                        <a class="btn btn-default pull-right" href="/BookManager/CreateNewBook">Thêm sách mới</a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+
+                            <h5>Hình ảnh</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Tên quyển sách</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Gía</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Tên tác giả</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Thể loại</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Miêu tả</h5>
+
+                        </th>
+                        <th>
+
+                            <h5></h5>
+
+                        </th>
+                        <th>
+
+                            <h5></h5>
+
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @{
+                        var items = ViewBag.OnePageOfBooks;
+                        foreach (var item in items)
+                        {
+                            <tr>
+                                <td class="text-center">
+
+                                    <h5><img src="~/Images/@item.Image" alt="" class="img-rounded" width="50px"></h5>
+
+                                </td>
+                                <td class="text-center">
+                                    <h5>@item.Title</h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <small>@item.Price</small>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5>@item.AuthorName</h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5>@item.Category_Name</h5>
+
+                                </td>
+                                <td class="text-center">
+                                   @item.Decription
+                                </td>
+                                <td class="text-center">
+
+                                    <h5><a href="/ProductManager/Edit?productId=@item.BookID">Edit</a></h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5><a href="/ProductManager/Delete?productId=@item.BookID">Delete</a></h5>
+
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+            <div class="panel-footer">
+                @Html.PagedListPager((IPagedList)ViewBag.OnePageOfBooks, page => Url.Action("Index", new { page = page }))
+            </div>
+        </div>
+    </div>
+
+</div>

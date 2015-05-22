@@ -1,0 +1,108 @@
+﻿@model System.Collections.Generic.List<Assignment5.Models.BookViewModel>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <strong>QUẢN LÍ NGƯỜI DÙNG</strong>
+                    </th>
+                    <th>
+                        <form class="navbar-form navbar-left" role="search" action="/ProductManager/SearchManager">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="name" id="">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="x" style=" font-family: 'VNF-Sofia Regular';text-align:left;color:white">Search</button>
+                        </form>
+                    </th>
+                    <th>
+                        <a class="btn btn-default pull-right" href="/BookManager/CreateNewBook">Thêm nhân viên mới</a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+
+                            <h5>Tên đăng nhập</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Mật khẩu</h5>
+
+                        </th>
+                        <th class="text-center">
+
+                            <h5>Quyền</h5>
+
+                        </th>
+                        <th>
+
+                            <h5></h5>
+
+                        </th>
+                        <th>
+
+                            <h5></h5>
+
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @{
+                        var items = ViewBag.OnePageOfUser;
+                        foreach (var item in items)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    <h5>@item.UserName</h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <small>***********</small>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5>@item.RoleName</h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5><a href="/ProductManager/Edit?productId=@item.UserId">Edit</a></h5>
+
+                                </td>
+                                <td class="text-center">
+
+                                    <h5><a href="/ProductManager/Delete?productId=@item.UserId">Delete</a></h5>
+
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+            <div class="panel-footer">
+                @Html.PagedListPager((IPagedList)ViewBag.OnePageOfUser, page => Url.Action("Index", new { page = page }))
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+D:\GitHub\Assignment5\Assignment5.DAL\obj\Debug\Assignment5.DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\Assignment5.DAL.dll.config
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\Assignment5.DAL.dll
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\Assignment5.DAL.pdb
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\EntityFramework.dll
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\EntityFramework.xml
+D:\GitHub\Assignment5\Assignment5.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\Assignment5\Assignment5.DAL\obj\Debug\Assignment5.DAL.dll
+D:\GitHub\Assignment5\Assignment5.DAL\obj\Debug\Assignment5.DAL.pdb

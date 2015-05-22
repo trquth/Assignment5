@@ -1,0 +1,9 @@
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\Assignment5.BUL.dll
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\Assignment5.BUL.pdb
+D:\GitHub\Assignment5\Assignment5.BUL\obj\Debug\Assignment5.BUL.csprojResolveAssemblyReference.cache
+D:\GitHub\Assignment5\Assignment5.BUL\obj\Debug\Assignment5.BUL.dll
+D:\GitHub\Assignment5\Assignment5.BUL\obj\Debug\Assignment5.BUL.pdb
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\Assignment5.DAL.dll
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\EntityFramework.dll
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\Assignment5.DAL.pdb
+D:\GitHub\Assignment5\Assignment5.BUL\bin\Debug\EntityFramework.xml
