@@ -23,19 +23,19 @@ namespace Assignment5.Controllers
             var model = GetUsers();
             var numberPage = page ?? 1;
             var onPageOfCategory = model.ToPagedList(numberPage, 5);
-            ViewBag.OnePageOfUser = onPageOfCategory;
+            ViewBag.OnePageOfCategory = onPageOfCategory;
             return View();
         }
         public IEnumerable<CategoryViewModel> GetUsers()
         {
             var model = category.GetListCategory();
-            var  = from a in model
+            var categorys = from a in model
                         select new CategoryViewModel
                         {
                            Category_ID =a.Category_ID,
                            Category_Name =a.Category_Name
                         };
-            return users;
+            return categorys;
         }
 
     }

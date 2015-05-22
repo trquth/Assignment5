@@ -8000,9 +8000,19 @@ button.close {
 
 /*Banner cua trang*/
 .masthead {
-    top:auto;
-    height: 100px;
+    top: auto;
+    height: 200px;
     background-position: center;
-    background-image: url('../Images/banner.jpg');
+    background-image: url('../Images/book-banner.jpg');
     background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
 }

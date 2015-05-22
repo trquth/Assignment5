@@ -217,7 +217,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\book-banner.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -252,6 +252,7 @@
     <Content Include="Views\Shared\AdminLayout.cshtml" />
     <Content Include="Views\BookManager\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\CategoryManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
